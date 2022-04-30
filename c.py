@@ -1,25 +1,16 @@
-class Bird:
-    className = 'птица'
-    objCount = 0
-    def __init__(self, name, id, age):
-        self.__name = name
-        self.id = id
-        self.age = age
-        Bird.objCount += 1
-    def info(self):
-        print(self.__name)
-        print(self.id)
-        print(self.age)
+class Vehicle():
+    def __init__(self, color, price, type):
+        self.color = color
+        self.price = price
+        self.type = type
+    
+    def drive(self):
+        print(self.color, self.type, "поехал")
+    def stop(self):
+        print(self.color, self.type, "остановился")
 
-    def get_name(self):
-        return self.__name
-    def set_name(self, name):
-        self.__name = name
-
-b = Bird('Евлампий', 1, 12)
-b1 = Bird('Анна', 2, 14)
-b.set_name('Савелий')
-print(b.get_name())
-
-b.info()
-b1.info()
+car1 = Vehicle("Красный", 10000, "легковой")
+car2 = Vehicle("Зелёный", 100000, "грузовой")
+print(car1.color, car1.price, car1.type)
+car1.drive()
+car2.drive()
